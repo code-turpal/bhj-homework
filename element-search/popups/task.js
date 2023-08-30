@@ -4,10 +4,10 @@ const modal = document.querySelectorAll('.modal');
 const modalClose = document.querySelectorAll('.modal__close');
 const showSucces = document.querySelector('.show-success');
 
-modalMain.className = 'modal modal_active';
+modalMain.classList.toggle('modal_active');
 
 modalClose.forEach(element => {
-    element.onclick = function() {
+    element.onclick = () => {
         modal.forEach(e => {
             e.className = 'modal';
         })
@@ -15,6 +15,8 @@ modalClose.forEach(element => {
     });
 
 showSucces.onclick = () => {
-    modalSuccess.className = 'modal modal_active';
+    modalSuccess.classList.toggle('modal_active');
 }
+
+
 
